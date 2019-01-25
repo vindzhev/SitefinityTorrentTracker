@@ -1,0 +1,45 @@
+﻿body {
+    background-color: #113037;
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+.header-external-nav,
+.footer-row-copyright {
+    background-color: #00938f;
+}
+
+
+.header-external-nav {
+    height: 28px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.header-internal-nav {
+    max-height: 42px;
+}
+
+.header-internal-nav ul li a {
+    color: #ffffff;
+}
+
+.header-logo-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.page-layout {
+    padding: 50px 0px;
+    background-color: #f4f4f4;
+}
+
+.footer-row {
+    padding: 20px 0 0 0;
+}
+
+.footer-row-copyright {
+    border-top: 1px solid #ffffff;
+}

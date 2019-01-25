@@ -1,0 +1,25 @@
+﻿@model SitefinityWebApp.Mvc.Models.AddTorrentWidgetModel
+
+<h1>Add Torrent Widget</h1>
+
+@using (Html.BeginForm("Index", "AddTorrentWidget", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CoverImage)
+        @Html.TextBoxFor(m => m.CoverImage, new { type = "file", name = "CoverImage", accept = "image/*" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.TorrentFile)
+        @Html.TextBoxFor(m => m.TorrentFile, new { type = "file", name = "TorrentFile", accept = ".torrent" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
