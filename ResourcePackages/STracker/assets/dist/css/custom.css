@@ -1,0 +1,30 @@
+﻿body {
+}
+
+
+/* Article List Stylings */
+.article-wrapper {
+    max-width: 350px;
+    border: 1px solid darkgray;
+}
+
+.article-cover {
+}
+
+    .article-cover img {
+        width: 100%;
+    }
+
+.article-summary {
+    max-height: 150px;
+    border-top: 1px solid darkgray;
+}
+
+    .article-summary .heading {
+        text-align: center;
+    }
+
+    .article-summary .content {
+        padding: 10px;
+        text-align: justify;
+    }

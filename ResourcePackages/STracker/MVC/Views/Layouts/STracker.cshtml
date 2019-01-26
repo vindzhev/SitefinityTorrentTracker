@@ -1,0 +1,84 @@
+﻿@using System.Web.Mvc;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.UI.MVC;
+@using Telerik.Sitefinity.Services;
+
+<!DOCTYPE html>
+<html @Html.RenderLangAttribute()>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title></title>
+
+    @Html.Section("head")
+
+    <!--Google fonts or font awesome styles  -->
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    @Html.StyleSheet(Url.WidgetContent("~/ResourcePackages/STracker/assets/dist/css/main.min.css"), "head", true)
+
+    @* Registering customm css created for the package *@
+    @Html.StyleSheet(Url.WidgetContent("~/ResourcePackages/STracker/assets/dist/css/custom.css"), "head")
+</head>
+
+<body>
+    @Html.Section("top")
+
+    <!-- Header Section  -->
+    <div class="stracker-header-area container-fluid">
+        <div class="row">
+            <!-- Main Logo -->
+            <div class="col-sm-3 stracker-main-logo">
+                @Html.SfPlaceHolder("HeaderLogo")
+            </div>
+            <!-- Main Header, this can include main menu, login , lanugage selector etc -->
+            <div class="col-sm-9 stracker-main-header">
+                @Html.SfPlaceHolder("MainHeader")
+            </div>
+        </div>
+    </div>
+
+    <!-- Body Section -->
+    <div class="stracker-main-body container-fluid">
+        <!-- header section: this can include main image or slider -->
+        <div class="stracker-main-body-header">
+            @Html.SfPlaceHolder("MainBodyHeader")
+        </div>
+        <!-- Body copy of your site -->
+        <div class="stracker-main-body-content">
+            @Html.SfPlaceHolder("MainBody")
+        </div>
+    </div>
+
+    <!-- Footer Section: your copyright information etc. -->
+    <div class="container-fluid stracker-footer">
+        @Html.SfPlaceHolder("Footer")
+    </div>
+
+
+
+
+    @* Inline editing scripts and helpers. They should be available only when inline editing is possible. *@
+    @Html.Section("inline-editing")
+    @if (Html.ShouldRenderInlineEditing())
+    {
+        @Html.Script(ScriptRef.MicrosoftAjax, "inline-editing", true)
+        @Html.Script(ScriptRef.MicrosoftAjaxCore, "inline-editing", true)
+        @Html.Script(ScriptRef.JQuery, "inline-editing", true)
+
+        @Html.Script(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Scripts.jquery.ba-outside-events.min.js"), "inline-editing", true)
+        @Html.Script(ScriptRef.KendoAll, "inline-editing", true)
+        @Html.Script(ScriptRef.KendoTimezones, "inline-editing", true)
+        @Html.Script(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Scripts.RequireJS.require.min.js"), "inline-editing", true)
+        @Html.InlineEditingManager(false)
+    }
+    @Html.Section("bottom")
+
+    @*  Registering custom js created for the package *@
+    @Html.Script(Url.Content("~/ResourcePackages/STracker/assets/dist/js/custom.js"), "top")
+</body>
+</html>
