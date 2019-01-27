@@ -1,8 +1,6 @@
-﻿@using System.Web.Mvc;
-@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+﻿@using Telerik.Sitefinity.UI.MVC;
 @using Telerik.Sitefinity.Modules.Pages;
-@using Telerik.Sitefinity.UI.MVC;
-@using Telerik.Sitefinity.Services;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
 
 <!DOCTYPE html>
 <html @Html.RenderLangAttribute()>
@@ -37,8 +35,18 @@
             </div>
 
             <!-- ExternalLinks -->
-            <div class="col-sm-9 stracker-main-header">
+            <div class="col-sm-7 stracker-main-header">
                 @Html.SfPlaceHolder("ExternalLinks")
+            </div>
+
+            <!-- Language Selection -->
+            <div class="col-sm-1 stracker-main-header">
+                @Html.SfPlaceHolder("LanguageSelection")
+            </div>
+
+            <!-- SignIn/Out -->
+            <div class="col-sm-1 stracker-main-header">
+                @Html.SfPlaceHolder("Login")
             </div>
         </div>
 

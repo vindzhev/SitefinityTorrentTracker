@@ -1,0 +1,28 @@
+@model SitefinityWebApp.Mvc.Models.TorrentUploaderWidgetModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers
+
+<h1>Add Torrent Widget</h1>
+
+@using (Html.BeginForm("Upload", "TorrentUploaderWidget", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Title</label>
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="torrent-description">Description</label>
+        @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="torrent-cover-image">Cover Image</label>
+        @Html.TextBoxFor(m => m.CoverImage, new { type = "file", name = "CoverImage", accept = "image/*" })
+
+        <label for="TorrentFile">Torrent Fiel</label>
+        @Html.TextBoxFor(m => m.TorrentFile, new { type = "file", name = "TorrentFile", accept = ".torrent" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
