@@ -17,12 +17,12 @@
     <!--Google fonts or font awesome styles  -->
     <link href="//fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     @Html.StyleSheet(Url.WidgetContent("~/ResourcePackages/STracker/assets/dist/css/main.min.css"), "head", true)
 
     @* Registering customm css created for the package *@
     @Html.StyleSheet(Url.WidgetContent("~/ResourcePackages/STracker/assets/dist/css/custom.css"), "head")
+    @Html.StyleSheet(Url.WidgetContent("~/ResourcePackages/STracker/assets/dist/css/all.min.css"), "head")
 </head>
 
 <body>
@@ -31,30 +31,40 @@
     <!-- Header Section  -->
     <div class="stracker-header-area container-fluid">
         <div class="row">
-            <!-- Main Logo -->
+            <!-- Main Logo/Contact -->
             <div class="col-sm-3 stracker-main-logo">
-                @Html.SfPlaceHolder("HeaderLogo")
+                @Html.SfPlaceHolder("ContactUs")
             </div>
-            <!-- Main Header, this can include main menu, login , lanugage selector etc -->
+
+            <!-- ExternalLinks -->
             <div class="col-sm-9 stracker-main-header">
-                @Html.SfPlaceHolder("MainHeader")
+                @Html.SfPlaceHolder("ExternalLinks")
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Site Navigation -->
+            <div class="col-sm-12 stracker-main-logo">
+                @Html.SfPlaceHolder("SiteNavigation")
             </div>
         </div>
     </div>
 
     <!-- Body Section -->
     <div class="stracker-main-body container-fluid">
-        <!-- header section: this can include main image or slider -->
+
+        <!-- Placeholder for image or slider -->
         <div class="stracker-main-body-header">
             @Html.SfPlaceHolder("MainBodyHeader")
         </div>
-        <!-- Body copy of your site -->
+
+        <!-- Page Body -->
         <div class="stracker-main-body-content">
             @Html.SfPlaceHolder("MainBody")
         </div>
     </div>
 
-    <!-- Footer Section: your copyright information etc. -->
+    <!-- Footer  -->
     <div class="container-fluid stracker-footer">
         @Html.SfPlaceHolder("Footer")
     </div>
@@ -80,5 +90,6 @@
 
     @*  Registering custom js created for the package *@
     @Html.Script(Url.Content("~/ResourcePackages/STracker/assets/dist/js/custom.js"), "top")
+    @Html.Script(Url.Content("~/ResourcePackages/STracker/assets/dist/js/all.min.js"), "top")
 </body>
 </html>

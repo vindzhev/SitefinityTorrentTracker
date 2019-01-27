@@ -1,0 +1,32 @@
+@model Telerik.Sitefinity.Frontend.Mvc.Models.ContentListViewModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+<div class="@Model.CssClass">
+    @foreach (var item in Model.Items)
+    {
+        var navigateUrl = HyperLinkHelpers.GetDetailPageUrl(item, ViewBag.DetailsPageId, ViewBag.OpenInSamePage, Model.UrlKeyPrefix);
+
+        <div class="article-row">
+            <div class="article-wrapper">
+                <div class="article-cover">
+                    <img src="@item.RelatedItem("ArticleImage").Fields.Url" alt="@item.RelatedItem("ArticleImage").Fields.Title" />
+                </div>
+                <div class="article-summary">
+                    <div class="tags-wrapper"></div>
+                    <div>
+                        <h3 class="heading">
+                            <a @Html.InlineEditingFieldAttributes("Title", "ShortText") href="@navigateUrl">@item.Fields.Title</a>
+                        </h3>
+
+                        <p class="content">@Html.HtmlSanitize((string)item.Fields.Summary)</p>
+
+                        <div class="redirect">
+                            <a class="button" @Html.InlineEditingFieldAttributes("Title", "ShortText") href="@navigateUrl">FIND OUT MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

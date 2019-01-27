@@ -1897,6 +1897,9 @@
     <Content Include="ResourcePackages\STracker\razorgenerator.directives" />
     <Content Include="ResourcePackages\STracker\MVC\Views\Layouts\STracker.cshtml" />
     <Content Include="ResourcePackages\STracker\MVC\Views\News\List.STorrentNewsList.cshtml" />
+    <Content Include="ResourcePackages\STracker\assets\dist\webfonts\fa-brands-400.woff2" />
+    <Content Include="ResourcePackages\STracker\assets\dist\webfonts\fa-solid-900.woff" />
+    <Content Include="ResourcePackages\STracker\MVC\Views\Torrent\List.STorrentTorrentList.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
