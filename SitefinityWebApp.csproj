@@ -1911,6 +1911,7 @@
     <Content Include="App_Data\Sitefinity\Configuration\NewsConfig.config" />
     <Content Include="ResourcePackages\STracker\MVC\Views\News\Detail.STrackerDetailPage.cshtml" />
     <Content Include="ResourcePackages\STracker\MVC\Views\Torrent\Detail.STrackerDetailPage.cshtml" />
+    <Content Include="ResourcePackages\STracker\MVC\Views\LoginStatus\LoginStatus.STrackerLoginName.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

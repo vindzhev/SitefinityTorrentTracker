@@ -1,9 +1,10 @@
 ﻿body {
     background-color: #13171a;
     background-image: url('../sprites/background.jpg');
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    color: #ffffff;
 }
 
 /* === HEADER AREA === */
@@ -37,6 +38,15 @@
                 color: #ffffff;
                 text-decoration: none;
             }
+
+    .stracker-header-area .stracker-main-user-actions {
+        text-align: right;
+    }
+
+    .stracker-header-area .stracker-main-user-actions a {
+        color: #ffffff;
+        text-decoration: none;
+    }
 
     .stracker-header-area .stracker-main-logo {
         max-width: 25%;
@@ -394,6 +404,7 @@
 }
 
 .upload-button {
+    min-width: 100%;
     height: 38px;
     line-height: 32px;
     color: #ffffff;
