@@ -3,8 +3,6 @@
     background-image: url('../sprites/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-
-    color: #ffffff;
 }
 
 /* === HEADER AREA === */
@@ -419,4 +417,9 @@
     left: 0;
     top: 0;
     opacity: 0;
+}
+
+form h3,
+form label {
+	color: #ffffff;
 }
