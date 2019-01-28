@@ -4,15 +4,21 @@
 @using Telerik.Sitefinity.Web.DataResolving;
 
 <div class="row">
-    <article class="@Model.CssClass" @Html.InlineEditingAttributes(Model.ProviderName, Model.ContentType.FullName, (Guid)Model.Item.Fields.Id)>
+    <article class="torrent-details @Model.CssClass" @Html.InlineEditingAttributes(Model.ProviderName, Model.ContentType.FullName, (Guid)Model.Item.Fields.Id)>
         <header>
             <h3><span @Html.InlineEditingFieldAttributes("Title", "ShortText")>@Model.Item.Fields.Title</span></h3>
         </header>
         <section>
-            <content>
-                
-            </content>
-
+            <div class="row download-section">
+                <span>Download: </span>
+                <a href="@Model.Item.RelatedItem("TorrentFile").Fields.Url" alt="@Model.Item.RelatedItem("TorrentFile").Fields.Title">@Model.Item.RelatedItem("TorrentFile").Fields.Title</a>
+            </div>
+            <div class="row cover-image-section">
+                <img src="@Model.Item.RelatedItem("Image").Fields.Url" alt="@Model.Item.RelatedItem("Image").Fields.Title" />
+            </div>
+            <div class="row summay-section">
+                <p>@Model.Item.Fields.Description</p>
+            </div>
         </section>
 
         <div class="article-info">
