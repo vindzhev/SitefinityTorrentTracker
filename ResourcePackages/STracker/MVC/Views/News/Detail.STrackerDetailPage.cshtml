@@ -1,0 +1,32 @@
+@model Telerik.Sitefinity.Frontend.Mvc.Models.ContentDetailsViewModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Web.DataResolving;
+
+<h1>POCHVAM DA BEGAM BATE</h1>
+
+<div class="row">
+    <article class="@Model.CssClass" @Html.InlineEditingAttributes(Model.ProviderName, Model.ContentType.FullName, (Guid)Model.Item.Fields.Id)>
+        <header>
+            <h3><span @Html.InlineEditingFieldAttributes("Title", "ShortText")>@Model.Item.Fields.Title</span></h3>
+        </header>
+        <section>
+            <content>
+                <div class="summary" @Html.InlineEditingFieldAttributes("Summary", "LongText")>@Html.HtmlSanitize((string)Model.Item.Fields.Summary)</div>
+
+                <br />
+
+                <div @Html.InlineEditingFieldAttributes("Content", "LongText")>@Html.HtmlSanitize((string)Model.Item.Fields.Content)</div>
+            </content>
+
+        </section>
+
+        <div class="article-info">
+            @Model.Item.GetDateTime("PublicationDate", "MMM d, yyyy, HH:mm tt")
+            @Html.Resource("By")
+            @DataResolver.Resolve(@Model.Item.DataItem, "Author", null)
+        </div>
+    </article>
+    
+    @Html.CommentsList(@Model.Item.DataItem)
+</div>

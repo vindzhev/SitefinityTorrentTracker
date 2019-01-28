@@ -30,29 +30,34 @@
     <div class="stracker-header-area container-fluid">
         <div class="row">
             <!-- Main Logo/Contact -->
-            <div class="col-sm-3 stracker-main-logo">
+            <div class="col-sm-3 stracker-main-contact">
                 @Html.SfPlaceHolder("ContactUs")
             </div>
 
             <!-- ExternalLinks -->
-            <div class="col-sm-7 stracker-main-header">
+            <div class="col-sm-7 stracker-main-external">
                 @Html.SfPlaceHolder("ExternalLinks")
             </div>
 
             <!-- Language Selection -->
-            <div class="col-sm-1 stracker-main-header">
+            <div class="col-sm-1 stracker-main-language">
                 @Html.SfPlaceHolder("LanguageSelection")
             </div>
 
             <!-- SignIn/Out -->
-            <div class="col-sm-1 stracker-main-header">
+            <div class="col-sm-1 stracker-main-user-actions">
                 @Html.SfPlaceHolder("Login")
             </div>
         </div>
 
         <div class="row">
-            <!-- Site Navigation -->
+            <!-- Site Logo -->
             <div class="col-sm-12 stracker-main-logo">
+                @Html.SfPlaceHolder("SiteLogo")
+            </div>
+
+            <!-- Site Navigation -->
+            <div class="col-sm-12 stracker-main-navigation">
                 @Html.SfPlaceHolder("SiteNavigation")
             </div>
         </div>

@@ -38,27 +38,41 @@
                 text-decoration: none;
             }
 
-    .stracker-header-area .stracker-main-logo .website-logo {
-        display: block;
+    .stracker-header-area .stracker-main-logo {
+        max-width: 25%;
         margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    .stracker-header-area .stracker-main-logo .stracker-navigation {
-        max-width: 40%;
+    .stracker-header-area .stracker-main-navigation .stracker-navigation {
+        max-width: 25%;
         margin: 0 auto;
         text-align: center;
     }
 
-        .stracker-header-area .stracker-main-logo .stracker-navigation .nav-link,
-        .stracker-header-area .stracker-main-logo .stracker-navigation .nav-link:hover,
-        .stracker-header-area .stracker-main-logo .stracker-navigation .nav-link:active,
-        .stracker-header-area .stracker-main-logo .stracker-navigation .nav-link:visited {
-            color: #ffffff;
+        .stracker-header-area .stracker-main-navigation .stracker-navigation .nav {
+            justify-content: space-around;
         }
 
-            .stracker-header-area .stracker-main-logo .stracker-navigation .nav-link strong.active {
-                border-bottom: 2px solid #ffffff;
+        .stracker-header-area .stracker-main-navigation .stracker-navigation .nav-item {
+            min-width: 150px;
+        }
+
+            .stracker-header-area .stracker-main-navigation .stracker-navigation .nav-item .nav-link,
+            .stracker-header-area .stracker-main-navigation .stracker-navigation .nav-item .nav-link:hover,
+            .stracker-header-area .stracker-main-navigation .stracker-navigation .nav-item .nav-link:active,
+            .stracker-header-area .stracker-main-navigation .stracker-navigation .nav-item .nav-link:visited {
+                color: #ffffff;
             }
+
+
+
+                .stracker-header-area .stracker-main-navigation .stracker-navigation .nav-item .nav-link.active {
+                    background-color: transparent;
+                    border-bottom: 2px solid #ffffff;
+                }
 
 
 /* === Page Body Area === */
@@ -66,18 +80,17 @@
     padding: 30px 0;
 }
 
-.stracker-main-body .stracker-main-body-header img {
-    width: 60%;
-    display: block;
-    margin: 30px auto;
-}
+    .stracker-main-body .stracker-main-body-header img {
+        width: 60%;
+        display: block;
+        margin: 30px auto;
+    }
 
 /* === Article List === */
 .article-row {
     padding: 50px 0;
     display: flex;
     flex-direction: row;
-
     background-color: transparent;
 }
 
@@ -177,4 +190,79 @@
     .article-row:nth-of-type(2n) .article-wrapper .article-summary .redirect a.button:hover {
         color: #ffffff;
         background-color: #13171a;
+    }
+
+/* === Article Details === */
+.row {
+    margin: 0px;
+}
+
+    .row article {
+        padding: 50px 0px;
+        background-color: #ffffff;
+    }
+
+        .row article header {
+            text-align: center;
+        }
+
+        .row article section,
+        .row article .article-info {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        .row article section {
+            text-align: justify;
+        }
+
+            .row article section content .summary {
+                text-align: center;
+                font-style: italic;
+                text-decoration: underline;
+            }
+
+        .row article .article-info {
+            padding-top: 30px;
+            text-align: right;
+            font-style: italic;
+            font-weight: 100;
+        }
+
+/* === Comments === */
+.sf-Comments {
+    width: 50%;
+    margin: 30px auto;
+}
+
+    .sf-Comments img {
+        border-radius: 5px;
+    }
+
+    .sf-Comments .sf-Comments-header h3 {
+        color: #ffffff;
+    }
+
+    .sf-Comments .sf-Comments-header a {
+        display: none !important;
+    }
+
+    .sf-Comments .sf-Comments-form button {
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        background-color: transparent;
+    }
+
+        .sf-Comments .sf-Comments-form button:hover {
+            color: #13171a;
+            background-color: #ffffff;
+        }
+
+    .sf-Comments .sf-Comments-form .sf-media-body > div:last-of-type {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .sf-Comments .sf-Comments-list .sf-media-body {
+        color: #ffffff;
     }
