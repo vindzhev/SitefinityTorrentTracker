@@ -2,27 +2,39 @@
 
 @using Telerik.Sitefinity.Frontend.Mvc.Helpers
 
-<h1>Add Torrent Widget</h1>
+<div class="admin-section">
+    <h1>Add Torrent Widget</h1>
 
-@using (Html.BeginForm("Upload", "TorrentUploaderWidget", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
+    @using (Html.BeginForm("Upload", "TorrentUploaderWidget", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
 
-    <div class="form-group">
-        <label for="exampleInputEmail1">Title</label>
-        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        <label for="torrent-description">Description</label>
-        @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        <label for="torrent-cover-image">Cover Image</label>
-        @Html.TextBoxFor(m => m.CoverImage, new { type = "file", name = "CoverImage", accept = "image/*" })
+        <div class="form-group">
+            <label for="exampleInputEmail1">Title</label>
+            @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label for="torrent-description">Description</label>
+            @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+        </div>
+        <div class="upload-section">
+            <div class="form-group">
+                <label>Cover Image: </label>
+                <div class="upload-button-wrapper">
+                    <button class="upload-button">Upload a Cover Image</button>
+                    @Html.TextBoxFor(m => m.CoverImage, new { type = "file", name = "TorrentFile", accept = "image/*", @class = "file-upload", @onchange = "updateUploadName(this, 'Upload a Cover Image')" })
+                </div>
+            </div>
 
-        <label for="TorrentFile">Torrent Fiel</label>
-        @Html.TextBoxFor(m => m.TorrentFile, new { type = "file", name = "TorrentFile", accept = ".torrent" })
-    </div>
+            <div class="form-group">
+                <label>Torrent File: </label>
+                <div class="upload-button-wrapper">
+                    <button class="upload-button">Upload a Torrent File</button>
+                    @Html.TextBoxFor(m => m.TorrentFile, new { type = "file", name = "TorrentFile", accept = ".torrent", @class = "file-upload", @onchange = "updateUploadName(this, 'Upload a Torrent File')" })
+                </div>
+            </div>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-}
+        <button type="submit" class="upload-button">Submit</button>
+    }
+</div>

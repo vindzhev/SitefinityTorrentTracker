@@ -352,3 +352,60 @@
         margin: 0 auto;
         display: inline-block;
     }
+
+/* === Administration === */
+.admin-section {
+    color: #ffffff;
+}
+
+    .admin-section h1 {
+        text-align: center;
+    }
+
+    .admin-section form {
+        width: 50%;
+        margin: 50px auto;
+    }
+
+        .admin-section form .upload-section {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+
+            .admin-section form .upload-section .form-group {
+                width: 45%;
+                max-width: 45%;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .admin-section form .upload-section .form-group label {
+                margin-right: 20px;
+            }
+
+.upload-button-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.upload-button {
+    height: 38px;
+    line-height: 32px;
+    color: #ffffff;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #ffffff;
+}
+
+.upload-button-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
