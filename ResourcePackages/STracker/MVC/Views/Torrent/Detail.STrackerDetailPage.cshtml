@@ -10,11 +10,7 @@
         </header>
         <section>
             <content>
-                <div class="summary" @Html.InlineEditingFieldAttributes("Summary", "LongText")>@Html.HtmlSanitize((string)Model.Item.Fields.Summary)</div>
-
-                <br />
-
-                <div @Html.InlineEditingFieldAttributes("Content", "LongText")>@Html.HtmlSanitize((string)Model.Item.Fields.Content)</div>
+                
             </content>
 
         </section>

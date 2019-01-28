@@ -266,3 +266,65 @@
     .sf-Comments .sf-Comments-list .sf-media-body {
         color: #ffffff;
     }
+
+/* === Torrent List === */
+.torrent-list {
+    display: flex;
+    flex-direction: column;
+}
+
+    .torrent-list li {
+        margin: 30px 0;
+    }
+
+    .torrent-list li:nth-of-type(2n) {
+        background-color: #ffffff;
+    }
+
+    .torrent-list .torrent-item {
+        width: 50%;
+        max-height: 135px;
+        margin: 30px auto;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        overflow: hidden;
+        text-align: justify;
+    }
+
+        .torrent-list .torrent-item .torrent-cover {
+            width: 300px;
+            margin-right: 20px;
+        }
+
+            .torrent-list .torrent-item .torrent-cover img {
+                width: 100%;
+            }
+
+        .torrent-list .torrent-item .torrent-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .torrent-list .torrent-item .torrent-info h3 a {
+                border-bottom: 1px solid #ffffff;
+            }
+
+            .torrent-list li:nth-of-type(2n) .torrent-item .torrent-info h3 a {
+                border-bottom: 1px solid #13171a;
+            }
+
+            .torrent-list .torrent-item .torrent-info p,
+            .torrent-list .torrent-item .torrent-info h3,
+            .torrent-list .torrent-item .torrent-info h3 a {
+                width: 100%;
+                color: #ffffff;
+                text-decoration: none;
+                text-overflow: ellipsis;
+            }
+
+            .torrent-list li:nth-of-type(2n) .torrent-item .torrent-info p,
+            .torrent-list li:nth-of-type(2n) .torrent-item .torrent-info h3,
+            .torrent-list li:nth-of-type(2n) .torrent-item .torrent-info h3 a {
+                color: #13171a;
+            }
